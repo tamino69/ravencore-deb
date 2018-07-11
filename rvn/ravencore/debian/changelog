@@ -1,8 +1,14 @@
+ravencore (1.0.3) stable; urgency=medium
+
+  * Pool stats and rebased daemon
+
+ -- Under <>  Wed, 11 Jul 2018 14:25:24 -0400
+
 ravencore (1.0.1) stable; urgency=medium
 
   * Extended API
 
- -- ubuntu <>  Wed, 06 Jun 2018 13:45:38 -0400
+ -- Under <>  Wed, 06 Jun 2018 13:45:38 -0400
 
 ravencore (0.0.9) stable; urgency=medium
 

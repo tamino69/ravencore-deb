@@ -14,6 +14,5 @@ RUN apt-get update && \
 	apt-key adv --keyserver keyserver.ubuntu.com --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
 RUN apt-get update && \
     apt-get -qy install python3 make build-essential devscripts dh-systemd mongodb-org
-RUN npm install npm@latest -g
 ADD ravencore/ /root/ravencore
 RUN ( cd /root/ravencore && debuild -uc -us )

@@ -2,12 +2,12 @@ Source: ravencore
 Section: under
 Priority: optional
 Maintainer: shmoze@gmail.com
-Build-Depends: nodejs (= 10.5.0), make, build-essential, curl, python3, dh-systemd
+Build-Depends: nodejs (= 10.5.0-1nodesource1), make, build-essential, curl, python3, dh-systemd
 Standards-Version: 3.9.5
 
 Package: ravencore
 Architecture: amd64
 Pre-Depends: curl, apt-transport-https
 Conflicts: ravend, ravencore
-Depends: mongodb-org, nginx, libzmq3-dev, ssl-cert, nodejs (= 10.5.0), ntp, python3, curl, adduser, realpath, sudo
+Depends: mongodb-org, nginx, libzmq3-dev, ssl-cert, nodejs (= 10.5.0-1nodesource1), ntp, python3, curl, adduser, realpath, sudo
 Description: under packaged ravencore server

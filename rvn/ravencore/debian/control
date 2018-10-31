@@ -9,5 +9,5 @@ Package: ravencore
 Architecture: amd64
 Pre-Depends: curl, apt-transport-https
 Conflicts: ravend, ravencore
-Depends: mongodb-org, nginx, libboost-system-dev, libboost-filesystem-dev, libboost-chrono-dev, libboost-program-options-dev, libboost-test-dev, libboost-thread-dev, libzmq3-dev, libevent-dev, ssl-cert, libminiupnpc10, libdb4.8-dev, libdb4.8++-dev, nodejs (>= 10), ntp, python3, curl, adduser, realpath, sudo
+Depends: mongodb-org, nginx, libzmq3-dev, ssl-cert, nodejs (>= 10), ntp, python3, curl, adduser, realpath, sudo
 Description: under packaged ravencore server

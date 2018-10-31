@@ -1,3 +1,9 @@
+ravencore (2.0.0) stable; urgency=medium
+
+  * Assets Prelaunch
+
+ -- Under <>  Wed, 30 Oct 2018 18:54:24 -0400
+
 ravencore (1.0.3) stable; urgency=medium
 
   * Pool stats and rebased daemon

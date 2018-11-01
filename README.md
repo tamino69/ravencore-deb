@@ -1,7 +1,15 @@
 Ravencore-deb
 ===========
 Packaging system to deploy Ravencoin Block Explorer
-**The current configuration of this repository creates deb packages suited to run on ubuntu, behind Cloudflare(snakeoil ssl only), and are customized for the domain https://ravencoin.network**
+
+The current configuration of this repository creates deb packages suited to run on ubuntu, behind Cloudflare(snakeoil ssl only)
+------------------
+
+To customize the domain, edit line 5 of ravencore-deb/rvn/ravencore/nginx-ravencore  
+```
+server_name ravencoin.network;
+```
+If running in a test VM be sure to make a hosts entry on whatever device you are accessing the site from to convert between the domain name and the ip of the test VM. For production usage be sure to customize all passwords for ravencoin
 
 Using the build environment 
 ------------------
@@ -27,7 +35,7 @@ sudo apt-get install -qy apt-transport-https curl python-minimal
 curl https://deb.nodesource.com/node_10.x/pool/main/n/nodejs/nodejs_10.5.0-1nodesource1_amd64.deb > node.deb
 sudo dpkg -i node.deb
 rm node.deb
-sudo dpkg -i ravencore_<version>_amd64.deb #this will error, the next commands resolve those errors
+sudo dpkg -i ravencore_<version>_amd64.deb #change <version>. This will error, the next commands resolve those errors.
 sudo apt-get update
 sudo apt-get -f install -y
 ````

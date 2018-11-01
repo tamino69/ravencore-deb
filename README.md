@@ -6,15 +6,15 @@ Packaging system to deploy Ravencoin Block Explorer
 Using the build environment 
 ------------------
 ````
-$sudo apt-get update
-$sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
-$curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-$sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-$sudo apt-get update
-$sudo apt-get install -y docker-ce git make
-$git clone https://github.com/underdarkskies/ravencore-deb
-$cd ravencore-deb/rvn
-$sudo make
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install -y docker-ce git make
+git clone https://github.com/underdarkskies/ravencore-deb
+cd ravencore-deb/rvn
+sudo make
 ````
 DEB file will appear in ravencore-deb/rvn/
 
@@ -22,19 +22,14 @@ Deploying a Ravencore Deb file
 ------------------------------------
 Download your deb to the home directory of your ubuntu instance
 ````
-$sudo apt-get install -y apt-transport-https curl && sudo dpkg -i ravencore_<version>_amd64.deb
-##the above will show errors, running the next command resolves those errors##
-$sudo apt-get update && sudo apt-get -f install -y
-$cd /etc/nginx/sites-enabled
-$sudo ln -s ../sites-available/nginx-ravencore .
-$sudo rm default
-$sudo rm ../sites-available/default
-$sudo systemctl enable mongod.service
-$sudo service mongod start
-$sudo service ravencore restart
-$sudo printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" | sudo tee /etc/systemd/system/nginx.service.d/override.conf
-$sudo systemctl daemon-reload
-$sudo service nginx restart
+sudo apt-get update
+sudo apt-get install -qy apt-transport-https curl python-minimal
+curl https://deb.nodesource.com/node_10.x/pool/main/n/nodejs/nodejs_10.5.0-1nodesource1_amd64.deb > node.deb
+sudo dpkg -i node.deb
+rm node.deb
+sudo dpkg -i ravencore_<version>_amd64.deb #this will error, the next commands resolve those errors
+sudo apt-get update
+sudo apt-get -f install -y
 ````
 at this point the ravencore service and nginx will automatically launch and run even after reboot
 

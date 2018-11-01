@@ -7,8 +7,6 @@ case "$1" in
 		chown -R ravencore /opt/under/ravencore/home
 		ln -s /etc/nginx/sites-available/nginx-ravencore /etc/nginx/sites-enabled
 		rm -f /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
-		systemctl enable mongod.service
-		service mongod start
 		mkdir /etc/systemd/system/nginx.service.d
 		printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
 		systemctl daemon-reload

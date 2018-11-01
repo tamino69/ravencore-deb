@@ -11,7 +11,7 @@
   "servicesConfig": {
     "web": {
       "disablePolling": false,
-	  "enableSocketRPC": false
+      "enableSocketRPC": false
     },
     "insight-ui": {
       "routePrefix": "",
@@ -20,14 +20,7 @@
     "insight-api": {
       "routePrefix": "api",
       "coinTicker" : "https://api.coinmarketcap.com/v1/ticker/ravencoin/?convert=USD",
-      "coinShort": "RVN",
-	  "db": {
-		"host": "127.0.0.1",
-		"port": "27017",
-		"database": "raven-api-livenet",
-		"user": "",
-		"password": ""
-	  }
+      "coinShort": "RVN"
     },
     "ravend": {
       "sendTxLog": "/opt/under/ravencore/home/.ravencore/pushtx.log",

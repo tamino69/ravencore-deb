@@ -1,12 +1,15 @@
 Ravencore-deb
 ===========
 Packaging system to deploy Ravencoin Block Explorer
-**The current configuration of this repository creates deb packages suited to run on ubuntu, behind Cloudflare(snakeoil ssl only)  
 
-To customize the domain, edit line 5 of nginx-ravencore
+The current configuration of this repository creates deb packages suited to run on ubuntu, behind Cloudflare(snakeoil ssl only)
+------------------
+
+To customize the domain, edit line 5 of ravencore-deb/rvn/ravencore/nginx-ravencore  
 ```
 server_name ravencoin.network;
 ```
+If running in a test VM be sure to make a hosts entry on whatever device you are accessing the site from to convert between the domain name and the ip of the test VM. For production usage be sure to customize all passwords for ravencoin
 
 Using the build environment 
 ------------------

@@ -10,8 +10,8 @@
   "messageLog": "",
   "servicesConfig": {
     "web": {
-      "disablePolling": false,
-	  "enableSocketRPC": false
+      "disablePolling": true,
+	    "enableSocketRPC": false
     },
     "insight-ui": {
       "routePrefix": "",
